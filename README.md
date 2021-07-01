@@ -10,6 +10,18 @@ npm start
 
 ## Routes
 
+### Getaway routes
+
+#### localhost:3000/
+
+| Type | Route | Data To Send | Data Received |
+| ------ | ------ | ------ | ------ |
+| POST | /verify | a cookie |  message : String |
+| POST | /create/:type | user : JSON | the created user : JSON |
+| POST | /create/:type/:sponsor | user : JSON | the created user : JSON |
+| POST | /login/:type | email & password : json | a user : JSON, a cookie with a token|
+
+
 ### User routes
 
 ##### localhost:3000/user/ 
@@ -20,10 +32,6 @@ npm start
 | GET | /:type | ------ | all users of a type : JSON |
 | GET | /:type/:id | ------ | a user : JSON |
 | GET | /email/:type/:email | ------ | a user : JSON |
-| POST | /verify | a cookie |  message : String |
-| POST | /create/:type | user : JSON | the created user : JSON |
-| POST | /create/:type/:sponsor | user : JSON | the created user : JSON |
-| POST | /login/:type | email & password : json | a user : JSON, a cookie with a token|
 | PUT | /:type/:id | a user : JSON | the updated user : JSON |
 | DELETE | /:type/:id | ------ | message : String |
 | DELETE | /log/:id | ------ | message : String |
